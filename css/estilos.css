@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Manjari|PT+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Manjari', sans-serif;
+    
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    background-color: #fff;    
+}
+
+header{
+    padding: 100px;
+    margin: 1px;
+    background-image: url(../img/volcan_extendido.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    padding-top: 100px; 
+    padding-bottom: 1px;
+    min-height: 70px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+#principal{
+    display:block; 
+    width: 100%;
+}
+
+#enviar{
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    border: 1;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 38px;
+    background-color: #008080;
+    color: white;
+}
+
+#descripcion{
+    margin: 10px auto;
+}
+
+#reservas{
+    width:30%;
+    float: left;
+    background-color: #56a098;
+    display: inline-block;
+    margin-bottom: 5px;
+    padding-bottom: 250px;
+}
+
+#lateral{
+    width: 69%;
+    margin: auto 3px;
+    float: left;
+}
+
+.foto{
+    width: 33%;
+    height: 180px;
+    margin: 1px;
+}
+
+.comenta{
+    text-align: center;
+}
+
+footer {
+    clear: both;
+    border-top: 2px solid #999999;
+    font-size: 12px;
+}
