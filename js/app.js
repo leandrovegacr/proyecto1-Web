@@ -20,6 +20,8 @@ var arregloFechas = [];
 var arregloPersonas = [];
 
 var validacionDatos = function () {
+
+    const regex = /^[1-9]-\d{4}-\d{4}$/;
     var pais = document.getElementById("pais").value;
     var id = document.getElementById("id").value;
     var nombre = document.getElementById("nombre").value;
@@ -28,13 +30,23 @@ var validacionDatos = function () {
     var fecha = document.getElementById("fecha").value;
     entradas = adultos + ninos;
 
-    var reservaPers = new ReservaPersonal(id, entradas, fecha, pais, nombre);
-    var reservaFech = new ReservaFecha(fecha, entradas);
+    if (pais == "CR") {
+        seguir = regex.test(id);
+    }else{
+        seguir = true;
+    }
 
-    modificaCreaReservas(arregloFechas, arregloPersonas, reservaFech, reservaPers);
-
-    console.log(arregloFechas);
-    console.log(arregloPersonas);
+    if (seguir) {
+        var reservaPers = new ReservaPersonal(id, entradas, fecha, pais, nombre);
+        var reservaFech = new ReservaFecha(fecha, entradas);
+    
+        modificaCreaReservas(arregloFechas, arregloPersonas, reservaFech, reservaPers);
+    
+        console.log(arregloFechas);
+        console.log(arregloPersonas);   
+    }else{
+        alert("Corrobore el formato de cédula costarricense. Es necesario incluir los guiones.");
+    }
 }
     
 function modificaCreaReservas(arregloF, arregloP, reservaF, reservaP) {
